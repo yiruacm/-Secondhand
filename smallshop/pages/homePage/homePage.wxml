@@ -1,0 +1,80 @@
+<view class="allView">
+
+  <view class="search">
+    <icon type="search" size="18" color="#405f80" class="search-img" />
+    <input type="text" placeholder="搜索商品" placeholder-class="placeholdere" confirm-type="done"   bindconfirm="toSearch"/>
+  </view>
+ <scroll-view class="grid-container" scroll-y="true" bindscrolltolower="onScrollLower">
+
+  <view class="sort" >
+    <text class="font1">热门分类</text>
+  </view>
+  <view class="sorts">
+    <view class="firstRow">
+      <view class="phone">
+        <view class="phoneText" id="手机" catchtap="sort">
+          <text class="">手机</text>
+          <text class="fangxing">二手手机放心买</text>
+        </view>
+        <image src="{{phoneImageUrl}}" class="phoneImg"></image>
+      </view>
+      <view class="shuma">
+        <view class="shumaText" id="数码" catchtap="sort">
+          <text class="">数码</text>
+          <text class="fangxingshuma">二手低价淘尖货</text>
+        </view>
+        <image src="{{xiangjiImageUrl}}" class="shumaImg"></image>
+      </view>
+     </view>
+     <view class="secondRow">  
+       <view class="shuma">
+        <view class="shumaText" id="图书" catchtap="sort">
+          <text class="">图书</text>
+          <text class="fangxingshuma">二手图书学的爽</text>
+        </view>
+        <image src="{{tushuSrc}}" class="shumaImg"></image>
+      </view>
+    
+     <view class="shuma">
+        <view class="shumaText" id="代步" catchtap="sort">
+          <text class="">代步</text>
+          <text class="fangxingshuma">二手代步代你行</text>
+        </view>
+        <image src="{{zixingSrc}}" class="shumaImg"></image>
+      </view>
+   </view>
+  </view>
+  
+ 
+<block wx:for="{{viewList}}"  wx:for-item="ima" wx:for-index="key">
+  <view class="post-container" catchtap="detail" id="{{key}}">
+      <view class="post-auther-date">
+        <image src="{{ima.userImage}}" class="post-auther"></image>
+        <text class="post-name">{{ima.username}}</text>
+     </view>
+    <view>
+   <scroll-view scroll-x="true"  scroll-into-view="third" class="content-scroll">
+      <block wx:for="{{ima.list}}" wx:for-item="item"> 
+        <view id="first" class="scroll-view1">
+          <image src="{{item}}" class="scroll-image1"></image>
+        </view>
+       </block>
+     </scroll-view>
+    </view>
+    <view class="money">
+       <text class="money">${{ima.price}}</text>
+    </view>
+    <view class="smallIntruduce">
+       <text class="content">{{ima.productTitle}}</text>
+    </view>
+  </view>
+</block>
+</scroll-view>
+   
+    <view class="body-view">
+         <loading hidden="{{hidden}}" bindchange="loadingChange">
+            加载中...
+         </loading>
+    </view>
+ 
+</view>

@@ -1,0 +1,73 @@
+{
+  "pages":[
+    
+    "pages/welcome/welcome",
+    "pages/homePage/homePage",
+    "pages/my/my",
+    
+     "pages/register/register",
+    
+     "pages/orderDetail/orderDetail",
+     "pages/shopping/shopping",
+     "pages/productDetail/productDetail",
+      "pages/address/address",
+    
+      "pages/sort/sort",
+      "pages/issue/issue",
+      "pages/wantproduct/wantproduct",
+      
+      "pages/aboutme/aboutme",
+      "pages/my-commit/my-commit",
+      "pages/selectSort/selectSort",
+      "pages/pay/pay",
+      "pages/orderstyleSort/orderstyleSort",
+      "pages/mysale/mysale",
+      "pages/changepersonal/changepersonal",
+      "pages/searchAndSortPage/searchAndSortPage",
+      "pages/sortlist/sortlist",
+      "pages/mysell/mysell"
+      
+    ],
+     "window":{
+    "navigationBarBackgroundColor": "#b3d4db"
+     },
+       "tabBar": {
+       "color":"#405f80",
+       "selectedColor": "#11cd6e",
+       "borderStyle": "white",
+       "backgroundColor": "#ffffff",
+       "list": [{
+         "pagePath": "pages/homePage/homePage",
+         "text": "首页",
+         "iconPath": "/images/首页.png",
+         "selectedIconPath": "/images/首页选中.png"
+       },{
+         "pagePath":  "pages/sort/sort",
+         "text": "分类",
+         "iconPath": "/images/分类.png",
+         "selectedIconPath": "/images/分类选中.png"     
+       },{
+      
+         "pagePath": "pages/issue/issue",
+         "text": "发布",
+         "iconPath": "/images/发布满蓝色@2x.png",
+         "selectedIconPath": "/images/发布满蓝色@2x.png"
+
+
+       },{
+      
+         "pagePath": "pages/shopping/shopping",
+         "text": "购物车",
+         "iconPath": "/images/购物车.png",
+         "selectedIconPath": "/images/购物车选中.png"
+
+
+       },{
+         "pagePath": "pages/my/my",
+         "text": "我",
+         "iconPath": "/images/我的.png",
+         "selectedIconPath": "/images/我的选中.png"
+       }]
+     }
+     
+}
